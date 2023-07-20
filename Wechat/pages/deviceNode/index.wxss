@@ -1,0 +1,18 @@
+.card{
+    margin-top: 17px;
+    width: 90%;
+    margin-left: 5%;
+    height: 130rpx;
+    border-radius: 50rpx;
+
+}
+.cell{
+    width: 90%;
+    margin-left: 5%;
+    height: 130rpx;
+    border-radius: 60rpx;
+
+}
+page{
+    background-color: #f0efef
+  }

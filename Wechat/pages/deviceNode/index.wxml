@@ -1,0 +1,12 @@
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
+<view class="card" wx:for="{{array}}">
+<van-cell  icon="cluster-o" is-link class="cell" data-node_id="{{item.node_id}}" bind:click="openNode" value="电量：{{ item.node_power }}%"> 
+  <view slot="title" bindlongpress="deleteDevice">
+    <view class="van-cell-text">节点ID:{{item.node_id}}</view>
+    <van-tag type="success" wx:if="{{item.node_online}}">在线</van-tag>
+    <van-tag type="danger" wx:if="{{!item.node_online}}">离线</van-tag>
+  </view>
+</van-cell>
+</view>
+<van-empty image="error" description="暂无节点" wx:if="{{none}}"/>

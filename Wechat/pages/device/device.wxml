@@ -1,0 +1,16 @@
+<!--pages/device/device.wxml-->
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+<van-cell title="添加设备" bindtap="test">
+  <van-icon slot="right-icon" name="scan" class="custom-icon" bindtap="test" />
+</van-cell>
+<view class="card" wx:for="{{array}}">
+<van-cell  icon="cluster-o" is-link class="cell" bindlongpress="deleteDevice" data-device_id="{{item.device_id}}" bind:click="openDevice"> 
+  <view slot="title" bindlongpress="deleteDevice">
+    <view class="van-cell-text">设备ID:{{item.device_id}}</view>
+    <van-tag type="success" wx:if="{{item.online}}">在线{{item.onlineMark}}</van-tag>
+    <van-tag type="danger" wx:else>离线</van-tag>     
+  </view>
+</van-cell>
+</view>
+<van-empty image="error" description="暂无设备" wx:if="{{none}}"/>

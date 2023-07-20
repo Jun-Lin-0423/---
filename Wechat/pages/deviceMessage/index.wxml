@@ -1,0 +1,43 @@
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+<view class="card3" wx:for="{{array}}">
+<van-cell  icon="bell" class="cell"> 
+  <view slot="title">
+    <view class="van-cell-text">{{item.content}}</view>
+  </view>
+  <van-tag type="warning">警告</van-tag>
+ </van-cell> 
+ </view>
+<view class="card">
+<!-- <van-cell  icon="points" is-link class="cell"> 
+  <view slot="title" bindlongpress="deleteDevice">
+  </view>
+</van-cell> -->
+<van-cell title="温度" icon="points">{{ temperature }}</van-cell>
+<van-cell title="湿度" icon="points">{{ humidity }}</van-cell>
+<van-cell title="光强" icon="points">{{ light_intensity }}</van-cell>
+<van-cell title="氮含量" icon="points">{{ nitrogen }}</van-cell>
+<van-cell title="磷含量" icon="points">{{ phosphorus }}</van-cell>
+<van-cell title="钾含量" icon="points">{{ potassium }}</van-cell>
+<van-cell title="二氧化碳浓度" icon="points">{{ carbon_dioxide }}</van-cell>
+<van-cell title="更新时间" icon="points">{{ time }}</van-cell>
+
+</view>
+
+<view class="card2">
+<van-cell title="AI模式" icon="birthday-cake-o">
+    <van-switch checked="{{ checked }}" bind:change="onChange" size="24px"/>
+</van-cell>
+<van-cell title="LED灯" icon="setting-o">
+    <van-switch checked="{{ checked1 }}" bind:change="onChange1" size="24px" disabled="{{ MODE }}"/>
+</van-cell>
+<van-cell title="风扇" icon="setting-o">
+    <van-switch checked="{{ checked2 }}" bind:change="onChange2" size="24px" disabled="{{ MODE }}"/>
+</van-cell>
+<van-cell title="继电器1" icon="setting-o">
+    <van-switch checked="{{ checked3 }}" bind:change="onChange3" size="24px" disabled="{{ MODE }}"/>
+</van-cell>
+<van-cell title="继电器2" icon="setting-o" >
+    <van-switch checked="{{ checked4 }}" bind:change="onChange4" size="24px" disabled="{{ MODE }}"/>
+</van-cell>
+</view>

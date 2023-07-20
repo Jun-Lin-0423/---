@@ -1,0 +1,21 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="温度"></van-tab>
+  <van-tab title="湿度"></van-tab>
+  <van-tab title="光强"></van-tab>
+  <van-tab title="CO₂浓度"></van-tab>
+</van-tabs>
+<view class="charts-box">
+  <qiun-wx-ucharts 
+    type="line"
+    opts="{{opts}}"
+    chartData="{{chartData}}"
+    canvas2d="{{true}}"
+    canvasId="bxFkEqvBJbDZhjeQdflEkYuAzfylQQyd"
+  />
+</view>
+<!-- <van-cell-group inset class="ter">
+  <van-cell title="最低值" value="{{ min }}℃" />
+  <van-cell title="平均值" value="{{ ave }}℃" />
+  <van-cell title="最高值" value="{{ max }}℃" />
+  <van-cell title="当前值" value="{{ now }}℃" />
+</van-cell-group> -->

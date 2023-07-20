@@ -1,0 +1,21 @@
+<view class="text">垂直植物种植系统</view>
+
+<van-cell-group class="charts-box">
+  <van-field
+    model:value="{{ username }}"
+    label="用户名"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+  />
+
+  <van-field
+    model:value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    border="{{ false }}"
+  />
+  <van-button type="primary" block class="button" bind:click="test">登 录</van-button>
+  <van-button type="default" block class="button2">注 册</van-button>
+</van-cell-group>
+
